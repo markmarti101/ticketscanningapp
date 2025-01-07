@@ -1,0 +1,10 @@
+^C:\USERS\MARKM\DESKTOP\TICKET SCANNING APP\HELLOWORLD\BUILD\WINDOWS\X64\CMAKEFILES\BE3728D77CFEC0AAA13E0B75FF60F059\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
